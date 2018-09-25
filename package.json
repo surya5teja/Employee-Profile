@@ -1,6 +1,7 @@
 {
   "name": "employee-profile",
   "version": "0.0.0",
+  "main":"app.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.config.json",
