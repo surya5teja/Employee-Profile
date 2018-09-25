@@ -1,0 +1,58 @@
+<div>
+  <h2 class="text-center">Create Profile</h2>
+<form #frm="ngForm" (ngSubmit)="createUser(frm);formSubmitted=true">
+  <div>
+    <div style="width:80%;" class="div_box">
+    <div style="float: left;width:30%;text-align: right;"> <label style="padding-right: 10px;" for="email">Email address:</label></div>
+      <div style="float: left;width:25%"><input type="email" [(ngModel)]="user.email" #email="ngModel" required name="email" id="email">
+      </div>
+      <div style="float: left;width:20%;color:red" *ngIf="email.touched || formSubmitted">
+          <span *ngIf="email.errors?.required">email is required</span>
+        </div>
+    </div>
+
+    <div style="width:80%" class="div_box">
+        <div style="float: left;width:30%;text-align: right;"> <label style="padding-right: 10px;" for="username">User Name:</label></div>
+        <div style="float: left;width:25%"><input [(ngModel)]="user.username" name="username" #username="ngModel" required id="username"></div>
+        <div style="float: left;width:20%;color:red" *ngIf="username.touched || formSubmitted">
+            <span *ngIf="username.errors?.required">username is required</span>
+          </div>
+      </div>
+    
+    <div style="width:80%"  class="div_box">
+        <div style="float: left;width:30%;text-align: right;"><label style="padding-right: 10px;" for="firstname">First Name:</label></div>
+        <div style="float: left;width:25%"> <input [(ngModel)]="user.firstname"  name="firstname"  id="firstname"></div>
+    </div>
+
+    <div style="width:80%"  class="div_box">
+        <div style="float: left;width:30%;text-align: right;"><label style="padding-right: 10px;" for="lastName">Last Name:</label></div>
+        <div style="float: left;width:25%">  <input [(ngModel)]="user.lastname" name="lastname" class="form-control" id="lastname"></div>
+    </div>
+
+    <div style="width:80%" class="div_box">
+        <div style="float: left;width:30%;text-align: right;"> <label style="padding-right: 10px;" for="phonenumber">Phone Number:</label></div>
+        <div style="float: left;width:25%"> <input type="text" [(ngModel)]="user.phonenumber" name="phonenumber" class="form-control" id="phonenumber"></div>
+    </div>
+
+    <div style="width:80%"  class="div_box">
+        <div style="float: left;width:30%;text-align: right;"> <label style="padding-right: 10px;"  for="gender">Gender:</label></div>
+        <div style="float: left;width:25%">  <input [(ngModel)]="user.gender" name="gender" class="form-control" id="gender"></div>
+    </div>
+
+    <div style="width:80%" class="div_box">
+        <div style="float: left;width:30%;text-align: right;"><label style="padding-right: 10px;" for="dob">Date Of Birth:</label></div>
+        <div style="float: left;width:25%">  <input type="text" [(ngModel)]="user.dateofbirth"  name="dateofbirth" class="form-control" id="dateofbirth"></div>
+    </div>
+
+    <div style="width:80%"  class="div_box">
+        <div style="float: left;width:30%;text-align: right;"> <label style="padding-right: 10px;" for="nationality">Nationality:</label></div>
+        <div style="float: left;width:25%">  <input [(ngModel)]="user.nationality"  name="nationality" class="form-control" id="nationality"></div>
+    </div>
+
+    <div style="width:41%;margin-top:20px;" class="div_box">
+      <div style="text-align: center"> <button type="submit" class="btn btn-success">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>

@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+body
+{
+    background: #e6e6e6;
+    margin: 0px;
+    margin-bottom:50px;
+}
+.footer {
+    position: fixed;
+    height: 140px;
+    background-color: black;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+.anchor_changes
+{
+    color:white;
+    text-decoration: none;
+}
+
+.div_box {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px; /* SIMPLY SET THIS PROPERTY AS MUCH AS YOU WANT. This changes the space below box1 */
+    text-align: justify;
+}

@@ -1,0 +1,6 @@
+{
+    "/signup/*": {
+      "target": "https://young-island-32627.herokuapp.com",
+      "secure": false
+    }
+  }
